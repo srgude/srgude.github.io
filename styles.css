@@ -99,3 +99,25 @@ footer {
 #contact ul li {
     margin: 10px 0;
 }
+#skills {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill-category {
+    margin-bottom: 15px;
+}
+
+.skill-category h3 {
+    cursor: pointer;
+    color: #007BFF; /* Bootstrap primary color */
+}
+
+.skills-list {
+    display: none; /* Initially hide the skills list */
+    margin-top: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+}
