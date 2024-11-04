@@ -76,6 +76,17 @@
         <p class="skills-list" style="display:none;">Linux, Windows, macOS</p>
     </div>
 </section>
+    <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the section
+        });
+    });
+</script>
+
 </body>
 </html>
 <!-- JavaScript for toggling skills list -->
