@@ -71,7 +71,18 @@
     </div>
 </section>
 
-
+<script>
+    document.querySelectorAll('.skill-category h3').forEach(header => {
+        header.addEventListener('click', () => {
+            const skillsList = header.nextElementSibling; // Get the corresponding skills list
+            if (skillsList.style.display === "block") {
+                skillsList.style.display = "none"; // Hide if currently displayed
+            } else {
+                skillsList.style.display = "block"; // Show if currently hidden
+            }
+        });
+    });
+</script>
 
       <section id="contact">
     <h2>Contact</h2>
