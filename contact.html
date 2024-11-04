@@ -29,6 +29,17 @@
         </ul>
         <p>Feel free to connect with me on LinkedIn or GitHub!</p>
     </section>
+    <script>
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor click behavior
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the section
+        });
+    });
+</script>
+
 </body>
 </html>
 <div id="resumeModal" class="modal">
