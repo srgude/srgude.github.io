@@ -18,64 +18,51 @@
             </ul>
         </nav>
     </header>
- <section id="skills">
+<section id="skills">
     <h2>My Skills</h2>
-    
     <div class="skill-category">
-        <h3 class="toggle">Programming Languages</h3>
-        <p class="skills-list" style="display:none;">Java, Go, SQL, R, Python, C/C++, JavaScript, HTML+CSS, C#</p>
+        <h3>Programming Languages</h3>
+        <p class="skills-list" data-category="programming">Java, Go, SQL, R, Python, C/C++, JavaScript, HTML+CSS, C#</p>
     </div>
-    
     <div class="skill-category">
-        <h3 class="toggle">Machine Learning and AI Frameworks</h3>
-        <p class="skills-list" style="display:none;">PyTorch, Scikit-learn, TensorFlow, GoLearn, Gobot</p>
+        <h3>Machine Learning and AI Frameworks</h3>
+        <p class="skills-list" data-category="ml-ai">PyTorch, Scikit-learn, TensorFlow, GoLearn, Gobot</p>
     </div>
-    
     <div class="skill-category">
-        <h3 class="toggle">Frameworks</h3>
-        <p class="skills-list" style="display:none;">Frontend - ReactJS, Angular; Backend - Django (for Python)</p>
+        <h3>Frameworks</h3>
+        <p class="skills-list" data-category="frameworks">Frontend - ReactJS, Angular; Backend - Django (for Python)</p>
     </div>
-
     <div class="skill-category">
-        <h3 class="toggle">Databases</h3>
-        <p class="skills-list" style="display:none;">MongoDB, AWS DynamoDB, PostgreSQL, MariaDB, MySQL</p>
+        <h3>Databases</h3>
+        <p class="skills-list" data-category="databases">MongoDB, AWS DynamoDB, PostgreSQL, MariaDB, MySQL</p>
     </div>
-    
     <div class="skill-category">
-        <h3 class="toggle">Data Warehouse</h3>
-        <p class="skills-list" style="display:none;">Snowflake, BigQuery</p>
+        <h3>Data Warehouse</h3>
+        <p class="skills-list" data-category="data-warehouse">Snowflake, BigQuery</p>
     </div>
-    
     <div class="skill-category">
-        <h3 class="toggle">Big Data Frameworks</h3>
-        <p class="skills-list" style="display:none;">Apache Hadoop, Apache Kafka, Apache Spark</p>
+        <h3>Big Data Frameworks</h3>
+        <p class="skills-list" data-category="big-data">Apache Hadoop, Apache Kafka, Apache Spark</p>
     </div>
-    
     <div class="skill-category">
-        <h3 class="toggle">DevOps Frameworks</h3>
-        <p class="skills-list" style="display:none;">Terraform, Ansible, Kubernetes</p>
-    </div>
-    
-    <div class="skill-category">
-        <h3 class="toggle">IDE & Tools</h3>
-        <p class="skills-list" style="display:none;">Goland, PyCharm, Eclipse, Visual Studio Code (VS Code), Git, Docker, KVM (Kernel-based Virtual Machine), Jenkins, ELK Stack, Bash Scripting, Postman</p>
-    </div>
-    
-    <div class="skill-category">
-        <h3 class="toggle">API Tools & Frameworks</h3>
-        <p class="skills-list" style="display:none;">Postman, ASP.NET Core, Flask, Django REST, GraphQL</p>
-    </div>
-    
-    <div class="skill-category">
-        <h3 class="toggle">Management Tools</h3>
-        <p class="skills-list" style="display:none;">JIRA, Confluence, Bitbucket, SharePoint, Microsoft Teams, Scrum</p>
-    </div>
-    
-    <div class="skill-category">
-        <h3 class="toggle">Operating Systems</h3>
-        <p class="skills-list" style="display:none;">Linux, Windows, macOS</p>
+        <h3>Tools</h3>
+        <p class="skills-list" data-category="tools">DevOps Frameworks: Terraform, Ansible, Kubernetes; IDE: Goland, PyCharm, Eclipse, Visual Studio Code; Dev Tools: Git, Docker, KVM, Jenkins, ELK Stack, Bash Scripting, Postman; API Tools: Postman, ASP.NET Core, Flask, Django REST, GraphQL; Management Tools: JIRA, Confluence, Bitbucket, SharePoint, Microsoft Teams, Scrum; Operating Systems: Linux, Windows, macOS</p>
     </div>
 </section>
+
+<script>
+    document.querySelectorAll('.skill-category h3').forEach(header => {
+        header.addEventListener('click', () => {
+            const skillsList = header.nextElementSibling; // Get the corresponding skills list
+            if (skillsList.style.display === "block") {
+                skillsList.style.display = "none"; // Hide if currently displayed
+            } else {
+                skillsList.style.display = "block"; // Show if currently hidden
+            }
+        });
+    });
+</script>
+
 
 
 </body>
