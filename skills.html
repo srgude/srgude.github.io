@@ -11,7 +11,7 @@
         <h1>My Skills</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Projects</a></li>
                 <li><a href="skills.html">Skills</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="resume.pdf" target="_blank">Download Resume</a></li>
@@ -76,37 +76,7 @@
         <p class="skills-list" style="display:none;">Linux, Windows, macOS</p>
     </div>
 </section>
-    <script>
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent default anchor click behavior
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the section
-        });
-    });
-</script>
+
 
 </body>
-</html>
-<!-- JavaScript for toggling skills list -->
-<script>
-    document.querySelectorAll('.toggle').forEach(header => {
-        header.addEventListener('click', () => {
-            const skillsList = header.nextElementSibling; // Get the corresponding skills list
-            if (skillsList.style.display === "block") {
-                skillsList.style.display = "none"; // Hide if currently displayed
-            } else {
-                skillsList.style.display = "block"; // Show if currently hidden
-            }
-        });
-    });
-</script>
-<div id="resumeModal" class="modal">
-    <div class="modal-content">
-        <span class="close-button">&times;</span>
-        <h2>My Resume</h2>
-        <embed src="resume.pdf" width="100%" height="500px" />
-    </div>
-</div>
 
